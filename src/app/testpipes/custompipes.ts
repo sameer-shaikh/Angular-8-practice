@@ -6,4 +6,4 @@ export class SqrtPipe implements PipeTransform {
    transform(val : number) : number {
       return Math.sqrt(val);
    }
-}
+} 

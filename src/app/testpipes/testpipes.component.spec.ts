@@ -5,7 +5,7 @@ import { TestpipesComponent } from './testpipes.component';
 describe('TestpipesComponent', () => {
   let component: TestpipesComponent;
   let fixture: ComponentFixture<TestpipesComponent>;
-
+ 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ TestpipesComponent ]

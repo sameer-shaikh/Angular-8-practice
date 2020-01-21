@@ -12,7 +12,7 @@ describe('ServerComponent', () => {
     })
     .compileComponents();
   }));
-
+ 
   beforeEach(() => {
     fixture = TestBed.createComponent(ServerComponent);
     component = fixture.componentInstance;

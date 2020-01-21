@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestpipesComponent implements OnInit {
   newcomponent = "Entered in new component created";
-
+ 
   constructor() { }
 
   ngOnInit() {

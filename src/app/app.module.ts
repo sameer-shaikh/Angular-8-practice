@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
