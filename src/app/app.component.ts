@@ -27,10 +27,11 @@ export class AppComponent {
   //       content: blueprintData.blueprintContent
   //     });
   //   }
-  //Chapter 5 end
+  // Chapter 5 end
 
-  //numbers = [1,2,3,4,5];
-  oddNumber = [1,3,5];
-  evenNumber = [2,4,6]
-  onlyOdd = false; 
+  // numbers = [1,2,3,4,5];
+  oddNumber = [1, 3, 5];
+  evenNumbers = [2, 4, 6];
+  onlyOdd = false;
+  value = 0;
 }

@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
  
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
     ChangetextDirective,
     ServerElementComponent,
     CockpitComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

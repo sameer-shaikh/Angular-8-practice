@@ -1,4 +1,4 @@
-<p>From App Component</p>
+<p class="p">From App Component</p>
 <!--<app-servers></app-servers> -->
 <!-- <a routerLink="new-testpipe">name</a> -->
 <!-- 
@@ -22,29 +22,53 @@
                 </p>
             </app-server-element>
         </div>
- </div> 
+    </div> 
 </div>
 -->
 <div class="row">
     <div class="col-xs-12">
         <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">only show odd numbers</button>
         <br>
-        <div *ngIf="onlyOdd">
         <ul class="list-group">
-            <li class="list-group-item"
-            *ngFor="let odd of oddNumber"
-            [ngClass]="{ odd: number % 2 !== 0}"            
-            > {{ odd }}</li>
-        </ul>
-        </div>
-        <div *ngIf="!onlyOdd">
-            <ul class="list-group">
-                <li class="list-group-item"
-                *ngFor="let even of evenNumber"
-                [ngStyle]="{color: even ? 'blue' : 'yellow'}"
-                > {{ even }}</li>
-            </ul>
-            <p appBasicHighlight>jsahdkaj dsjhkas adjkashdk </p>
+            <!-- <div *ngIf="onlyOdd">
+
+                <li class="list-group-item" *ngFor="let odd of oddNumber" [ngClass]="{ odd: number % 2 !== 0}">
+                    {{ odd }}</li>
+
             </div>
+            <div *ngIf="!onlyOdd">
+
+                <li class="list-group-item" *ngFor="let even of evenNumber"
+                    [ngStyle]="{color: even % 2 === 0 ? 'blue' : 'yellow'}"> {{ even }}</li>
+
+            -->
+                <!-- *ngIf with ng-template-->
+                <!--
+            </div>
+            <ng-template [ngIf]="!onlyOdd">
+                <div>
+                    <li class="list-group-item" *ngFor="let even of evenNumber"
+                        [ngStyle]="{color: even % 2 === 0 ? 'blue' : 'yellow'}"> {{ even }}</li>
+
+                </div>
+            </ng-template> -->
+            <div *appUnless= "onlyOdd">
+                <li class="list-group-item"
+                    [ngClass]="{odd: even % 2 !== 0}"
+                    [ngStyle]="{color: even % 2 !== 0 ? 'blue' : 'yellow'}"
+                    *ngFor="let even of evenNumbers">
+                    {{ even }}
+                </li>
+            </div>
+        </ul>
+        <p appBasicHighlight>jsahdkaj dsjhkas adjkashdk </p>
+        <p appBetterHighlight defaultColor="violet">this is better highlight</p>
+        <p [appBetterHighlight]="'pink'" [defaultColor]="'yellow'"> This is from html</p>
+        <div [ngSwitch]="value">
+            <p *ngSwitchCase="5"> Value is 5</p>
+            <p *ngSwitchCase="10"> Value is 10</p>
+            <p *ngSwitchCase="15"> Value is 15</p>
+            <p *ngSwitchDefalut> Value is Default</p>
+        </div>
     </div>
 </div>
